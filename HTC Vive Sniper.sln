@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{A206EA2B-6642-0D6E-202A-4910B6E0B0CF}") = "HTC Vive Sniper", "Assembly-UnityScript.unityproj", "{742ADF8E-BE30-C325-55B2-B4AF6B88F669}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{742ADF8E-BE30-C325-55B2-B4AF6B88F669}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{742ADF8E-BE30-C325-55B2-B4AF6B88F669}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{742ADF8E-BE30-C325-55B2-B4AF6B88F669}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{742ADF8E-BE30-C325-55B2-B4AF6B88F669}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
