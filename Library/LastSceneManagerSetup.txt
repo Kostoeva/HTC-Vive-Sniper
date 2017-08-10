@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/skyscrapers/flytest.unity
+  isLoaded: 1
+  isActive: 1
