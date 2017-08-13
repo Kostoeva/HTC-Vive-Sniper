@@ -18,5 +18,9 @@ public class sniper : MonoBehaviour {
 
       bullet.GetComponent<Rigidbody>().velocity = 1000f * bulletSpawnPoint.transform.forward;
     }
+
+    if (device.GetPressDown(SteamVR_Controller.ButtonMask.Touchpad)) {
+      Vector2 touch = device.GetAxis(Valve.VR.EVRButtonId.k_EButton_Axis0);
+    }
 	}
 }
