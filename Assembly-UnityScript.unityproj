@@ -46,6 +46,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Fx Explosion Pack\Script\DemoSceneCode.js" />
+     <Compile Include="Assets\Fx Explosion Pack\Script\MouseOrbit.js" />
      <Compile Include="Assets\skyscrapers\scripts\airplane.js" />
      <Compile Include="Assets\skyscrapers\scripts\explosion.js" />
      <Compile Include="Assets\skyscrapers\scripts\gamecontrol.js" />

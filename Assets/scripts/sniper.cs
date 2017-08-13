@@ -8,6 +8,10 @@ public class sniper : MonoBehaviour {
 
   public SteamVR_TrackedObject rightController;
 
+  public Camera scopeCamera;
+  public const float minFOV = 10f;
+  public const float maxFOV = 90f;
+
 	// Update is called once per frame
 	void Update () {
     var device = SteamVR_Controller.Input((int) rightController.index);
@@ -16,11 +20,20 @@ public class sniper : MonoBehaviour {
       bulletPrefab, bulletSpawnPoint.position,
       bulletSpawnPoint.transform.rotation) as GameObject;
 
-      bullet.GetComponent<Rigidbody>().velocity = 1000f * bulletSpawnPoint.transform.forward;
+      bullet.GetComponent<Rigidbody>().velocity = 250f * bulletSpawnPoint.transform.forward;
     }
 
-    if (device.GetPressDown(SteamVR_Controller.ButtonMask.Touchpad)) {
-      Vector2 touch = device.GetAxis(Valve.VR.EVRButtonId.k_EButton_Axis0);
+    if (device.GetPress(SteamVR_Controller.ButtonMask.Touchpad)) {
+      float touchY = device.GetAxis(Valve.VR.EVRButtonId.k_EButton_Axis0).y;
+      float fov = scopeCamera.fieldOfView - touchY;
+      if (fov < minFOV) {
+        scopeCamera.fieldOfView = minFOV;
+      } else if (fov > maxFOV) {
+        scopeCamera.fieldOfView = maxFOV;
+      } else {
+        scopeCamera.fieldOfView = fov;
+      }
+
     }
 	}
 }
