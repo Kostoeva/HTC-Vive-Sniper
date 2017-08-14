@@ -12,6 +12,13 @@ public class sniper : MonoBehaviour {
   public const float minFOV = 10f;
   public const float maxFOV = 90f;
 
+  public AudioClip shot;
+  public AudioSource audioSource;
+
+  void Start() {
+    audioSource = GetComponent<AudioSource>();
+  }
+
 	// Update is called once per frame
 	void Update () {
     var device = SteamVR_Controller.Input((int) rightController.index);
@@ -21,6 +28,7 @@ public class sniper : MonoBehaviour {
       bulletSpawnPoint.transform.rotation) as GameObject;
 
       bullet.GetComponent<Rigidbody>().velocity = 250f * bulletSpawnPoint.transform.forward;
+      audioSource.PlayOneShot(shot);
     }
 
     if (device.GetPress(SteamVR_Controller.ButtonMask.Touchpad)) {
