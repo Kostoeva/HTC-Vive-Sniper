@@ -7,7 +7,9 @@ public class airplane : MonoBehaviour {
 
   void OnTriggerEnter()
   {
-    Instantiate(Explosion, transform.position, Quaternion.identity);
+    Vector3 temp = transform.position;
+    temp.y += 10f;
+    Instantiate(Explosion, temp, Quaternion.identity);
     Destroy(this.gameObject);
   }
 
